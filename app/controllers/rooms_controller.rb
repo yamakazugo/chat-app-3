@@ -1,4 +1,8 @@
 class RoomsController < ApplicationController
+
+  def index
+  end
+  
   def new
     @room = Room.new
   end
@@ -14,6 +18,6 @@ class RoomsController < ApplicationController
 
   private
    def rooms_params
-    params.require(:room).permit(name:, user_uds: [])
+    params.require(:room).permit(:name, user_ids: [])
    end
 end
